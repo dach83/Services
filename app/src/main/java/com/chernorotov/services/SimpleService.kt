@@ -7,7 +7,7 @@ import android.util.Log
 
 
 
-class MyService : Service() {
+class SimpleService : Service() {
 
     override fun onCreate() {
         super.onCreate()
@@ -21,7 +21,7 @@ class MyService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand: ")
-        return super.onStartCommand(intent, flags, startId)
+        return START_NOT_STICKY
     }
 
     override fun onDestroy() {
@@ -30,7 +30,7 @@ class MyService : Service() {
     }
     
     companion object {
-        const val TAG = "MyService"
+        const val TAG = "MySimpleService"
     }
     
 }

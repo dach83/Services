@@ -22,7 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MyService"/>
+
+        <service android:name=".SimpleService" />
+        <service android:name=".BindService" />
+        <service android:name=".HelloService"/>
     </application>
 
 </manifest>
